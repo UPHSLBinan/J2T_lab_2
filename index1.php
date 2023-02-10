@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "myadmin";
 $password = "myadmin";
-$dbname = "Castillo";
+$dbname = "CastilloArielle";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 // sql to create table
-$sql = "CREATE TABLE Castillo(
+$sql = "CREATE TABLE Arielle (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 firstname VARCHAR(30) NOT NULL,
 lastname VARCHAR(30) NOT NULL,
@@ -21,7 +21,7 @@ reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Table MyGuests created successfully";
+  echo "Table Arielle created successfully";
 } else {
   echo "Error creating table: " . $conn->error;
 }
