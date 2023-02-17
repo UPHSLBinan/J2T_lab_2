@@ -15,13 +15,13 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT Firstname, Lastname FROM users";
+$sql = "SELECT Username, Password FROM login";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo " Name:  " . $row["Firstname"]. " " . $row["Lastname"]. "<br>";
+    echo " Username: " . $row["Username"].  " Password: "  . $row["Password"]. "<br>";
   }
 } else {
   echo "0 results";
