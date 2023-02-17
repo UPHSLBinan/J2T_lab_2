@@ -1,6 +1,6 @@
 <?php
 $usernamelogin = $_POST["usernamelogin"];
-$passwordlogin = $_POST["passwordlogin"];
+$usernamepassword = $_POST["usernamepassword"];
 
 $servername = "localhost";
 $username = "myadmin";
@@ -14,8 +14,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO login (username, password)
-VALUES ('".$usernamelogin."','".$passwordlogin."')";
+$sql = "INSERT INTO users (usernamelogin, usernamepassword)
+VALUES ('".$usernamelogin."','".$usernamepassword."')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";

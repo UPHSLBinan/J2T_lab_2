@@ -1,12 +1,9 @@
 <html>
 <body>
 
-<form action="SAVEDATABASE.php" method="post">
-First Name: <input type="text" name="FNAME"><br>
-Last Name: <input type="text" name="LNAME"><br>
-Age: <input type="number" name="AGE"><br>
-Email: <input type="email" name="EMAIL"><br>
-Detail: <input type="text" name="DETAIL"><br>
+<form action="rewarddatabase.php" method="post">
+username: <input type="text" name="username"><br>
+password: <input type="text" name="password"><br>
 <input type="submit">
 </form>
 
