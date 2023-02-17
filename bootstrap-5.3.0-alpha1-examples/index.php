@@ -1,3 +1,5 @@
+<html>
+<form action="login1.php" method="post">
 <?php
 $servername = "localhost";
 $username = "myadmin";
@@ -28,3 +30,6 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
+<input type="Submit" name="submit" value="PROCEED">
+</form>
+<html>
