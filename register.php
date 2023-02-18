@@ -2,9 +2,12 @@
 <body>
 
 <form action="register2.php" method="post">
+Register <br>
 Username: <input type="text" name="Username"><br>
 Password: <input type="text" name="Password"><br>
-<input type="SUBMIT">
+<input type="submit" value = "LOGIN">
+<input type="submit" value = "REGISTER">
+
 </form>
 
 </body>

@@ -19,9 +19,15 @@ VALUES ('".$Username."', '".$Password."')";
 
 if ($conn->query($sql) === TRUE) {
   echo "Registered successfully";
+
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
 ?>
+
+
+
+
+
