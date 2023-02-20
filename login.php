@@ -24,3 +24,4 @@ if ($result->num_rows > 0) {
       } else {
         echo "Invalid username or password";      
 }  $conn->close();?>
+
