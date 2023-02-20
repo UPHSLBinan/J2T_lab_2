@@ -11,11 +11,9 @@
     die("Connection failed: " . $conn->connect_error);
   }
 
-
-
-
 $username = $_POST['username'];
 $password = $_POST['password'];
+
 
 $sql = "SELECT * FROM accounts WHERE username='$username' AND password='$password'";
       $result = $conn->query($sql);

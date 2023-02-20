@@ -14,6 +14,8 @@
 // checks if registration form is submitted
 
 $username = $_POST['username'];
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
 $password = $_POST['password'];
 $confirmpassword = $_POST['confirmpassword'];
 
@@ -31,8 +33,8 @@ if ($result->num_rows > 0) {
 }
 
 else {
-$sql = "INSERT INTO accounts (username, password, confirmpassword) 
-VALUES ('".$username."','".$password."', '".$confirmpassword."')";
+$sql = "INSERT INTO accounts (username, fname, lname, password, confirmpassword) 
+VALUES ('".$username."', '".$fname."', '".$lname."', '".$password."', '".$confirmpassword."')";
 if ($conn->query($sql) === TRUE){
 {echo 'Registration successful!';
 }

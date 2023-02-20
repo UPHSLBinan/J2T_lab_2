@@ -11,7 +11,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT fname, lname FROM francis WHERE lname ='Velarde'";
+$sql = "SELECT fname, lname FROM users WHERE lname ='Hernandez'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
