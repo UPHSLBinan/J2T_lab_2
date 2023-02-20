@@ -9,7 +9,7 @@
 <label for ="username"> Username:</label>
 <input type= "varchar" name = "username"required><br><br>
 <label for ="password"> Password:</label>
-<input type= "varchar" name = "password" required><br><br>
+<input type= "password" name = "password" required><br><br>
 <input type = "submit" value = "Login">
 
 <h5> Don't have an account? <a href="rewardregister.php">Sign up here!</a></h5>

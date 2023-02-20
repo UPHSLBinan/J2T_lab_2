@@ -4,10 +4,6 @@ $username = "myadmin";
 $password = "myadmin";
 $dbname = "dimaguila";
 
-$Username = $_POST ['Username'];
-$Password = $_POST ['Password'];
-$ConfirmPassword = $_POST ['ConfirmPassword'];
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -15,13 +11,12 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "Insert INTO register (Username, Password, ConfirmPassword)
-Values ('".$Username."','".$Password."','".$ConfirmPassword."')";
+$sql = "UPDATE users SET detail='BSIT - II' WHERE age= 20";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Registered successfully";
+  echo "Record updated successfully";
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo "Error updating record: " . $conn->error;
 }
 
 $conn->close();

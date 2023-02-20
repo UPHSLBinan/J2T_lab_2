@@ -7,9 +7,9 @@
 <label for ="username"> Username:</label>
 <input type= "varchar" name = "username"required><br><br>
 <label for ="password"> Password:</label>
-<input type= "varchar" name = "password"required><br><br>
+<input type= "password" name = "password"required><br><br>
 <label for="confirmpassword"> Confirm Password:</label>
-<input type= "varchar" name = "confirmpassword"required><br><br>
+<input type= "password" name = "confirmpassword"required><br><br>
 <input type = "submit" value = "Register">
 
 </form>
