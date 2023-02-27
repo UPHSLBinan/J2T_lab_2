@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "myadmin";
+$username = "suzuki";
 $password = "myadmin";
-$dbname = "keiji";
+$dbname = "suzuki";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,19 +11,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// sql to create table
-$sql = "CREATE TABLE SUZUKI (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-firstname VARCHAR(30) NOT NULL,
-lastname VARCHAR(30) NOT NULL,
-email VARCHAR(50),
-reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-)";
+$sql = "INSERT INTO users (Fname, Lname, Age, Email, Detail)
+VALUES ('$_POST[Fname]', '$_POST[Lname]', '$_POST[Age]', '$_POST[Email]', '$_POST[Detail]')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Table MyGuests created successfully";
+  echo "New record created successfully";
 } else {
-  echo "Error creating table: " . $conn->error;
+  echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
