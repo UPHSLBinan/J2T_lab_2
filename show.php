@@ -12,14 +12,14 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
                   $conn = new mysqli($servername, $username, $password, $db);?>
 <html>
   <head>
-    <title>Registration</title>
+    <title>View User</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   </head>
   <body>
     <div class="container">
       <div class="row justify-content-center mt-5">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <div class="card">
             <div class="card-header">
               <h4>User Info <a href= "login.php" class = "btn btn-danger float-end">BACK</a></h4>
@@ -87,3 +87,6 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
