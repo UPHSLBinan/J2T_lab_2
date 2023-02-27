@@ -50,7 +50,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
                       <th>First Name</th>
                       <th>Last Name</th>
                       <th>Age</th>
-                      <th>Age</th>
+                      <th>Email</th>
                       <th>Detail</th>
                       <th>Action</th>
                      </tr>

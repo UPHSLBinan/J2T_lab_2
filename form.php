@@ -67,7 +67,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
                   <input type="number" class="form-control" name="age" placeholder="Age"required>
                 </div>
                 <div class="mb-3">
-                  <label for="email" class="form-label">Password</label>
+                  <label for="email" class="form-label">Email</label>
                   <input type="email" class="form-control" name="email" placeholder="name@example.com"required>
                 </div>
                 <div class="mb-3">
