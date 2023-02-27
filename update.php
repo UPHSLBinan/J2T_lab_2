@@ -22,7 +22,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
         <div class="col-md-6">
           <div class="card">
             <div class="card-header">
-              <h4>User Info <a href= "login.php" class = "btn btn-danger float-end">BACK</a></h4>
+              <h4>Update User<a href= "login.php" class = "btn btn-danger float-end">BACK</a></h4>
             </div>
               <div class = "card-body">
                 <?php
@@ -36,8 +36,8 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
                     {
                       $users = mysqli_fetch_array($query_run);
                       ?>
-                            <form action="form.php" method="POST">
-                            <input type="hidden" name="email" value="<?= $users['email']; ?>">
+                            <form action="update1.php" method="POST">
+                            <input type="hidden" name="student_email" value="<?= $users['email']; ?>">
 
                         <div class="mb-3">
                           <label>First Name</label>
@@ -64,9 +64,8 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
                           <input type = "varchar" name = "detail" value = "<?=$users['detail'];?>" class = "form-control">                                               
                         </div>
                         <div class="mb-3">
-                            <button type = "submit" class = "btn btn-primary">
-                                Update
-                             </button>
+                            <button type = "submit" name = "update_student" value="<?=$users['email'];?>" class = "btn btn-primary" >
+                            Update
                         </div>
                       </form>
                       <?php
