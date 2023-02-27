@@ -1,29 +1,89 @@
 <?php
-$servername = "localhost";
-$username = "hernandez";
-$password = "ranonline0110";
-$dbname = "hernandez";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+session_start();
+if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
+    // User is not logged in, redirect to the login page
+    header('Location: index.php');
+    exit;
 }
+                  $servername = "localhost"; 
+                  $username = "hernandez"; 
+                  $password = "ranonline0110"; 
+                  $db = "hernandez"; 
+                  $conn = new mysqli($servername, $username, $password, $db);?>
+<html>
+  <head>
+    <title>Registration</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4>User Info <a href= "login.php" class = "btn btn-danger float-end">BACK</a></h4>
+            </div>
+              <div class = "card-body">
+                <?php
+                 if(isset($_GET['email']))
+                 {
+                    $student_email = mysqli_real_escape_string($conn,$_GET['email']);
+                    $query = "SELECT * FROM francis1 WHERE email = '$student_email'";
+                    $query_run = mysqli_query($conn, $query);
 
-$sql = "SELECT fname, lname FROM accounts";
-$result = $conn->query($sql);
+                    if(mysqli_num_rows($query_run) > 0)
+                    {
+                      $users = mysqli_fetch_array($query_run);
+                      ?>
 
-if ($result->num_rows > 0) {
-  //output data of each row
-  while ($row = $result->fetch_assoc()) {
+                        <div class="mb-3">
+                          <label>First Name</label>
+                          <p class = "form-control">
+                            <?=$users['fname'];?>
+                          </p>
+                        </div>
 
-  echo "name:" . $row["fname"]. "" . $row["lname"]. "<br>";
-    }
+                        <div class="mb-3">
+                          <label>Last Name</label>
+                          <p class = "form-control">
+                            <?=$users['lname'];?>
+                          </p>
+                        </div>
 
-} else {
-  echo "0 results";
-}
+                        <div class="mb-3">
+                          <label>Age</label>
+                          <p class = "form-control">
+                            <?=$users['age'];?>
+                          </p>
+                        </div>
 
-$conn->close();
-?>
+                        <div class="mb-3">
+                          <label>Email</label>
+                          <p class = "form-control">
+                            <?=$users['email'];?>
+                          </p>
+                        </div>
+
+                        <div class="mb-3">
+                          <label>Details</label>
+                          <p class = "form-control">
+                            <?=$users['detail'];?>
+                          </p>
+                        </div>
+
+                      <?php
+                      }
+                      else
+                      {
+                        echo "<h4>No Such Record Found</h4>";
+                      }
+                    }
+                 ?>
+
+                 
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>

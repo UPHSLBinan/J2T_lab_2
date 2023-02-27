@@ -71,8 +71,8 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
                               <td><?= $users['email']; ?></td>
                               <td><?= $users['detail']; ?></td>
                               <td>
-                                <a href="student-view.php?id=<?= $student['id']; ?>" class="btn btn-info btn-sm">View</a>
-                                <a href="student-edit.php?id=<?= $student['id']; ?>" class="btn btn-success btn-sm">Edit</a>
+                                <a href="show.php?email=<?= $users['email']; ?>" class="btn btn-info btn-sm">View</a>
+                                <a href="student-edit.php?email=<?= $users['email']; ?>" class="btn btn-success btn-sm">Edit</a>
                                 <form action="code.php" method="POST" class="d-inline">
                                     <button type="submit" name="delete_student"  class="btn btn-danger btn-sm">Delete</button>
                                 </form>
