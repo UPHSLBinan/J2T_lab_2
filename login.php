@@ -12,7 +12,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
                   $conn = new mysqli($servername, $username, $password, $db);?>
 <html>
   <head>
-    <title>Registration</title>
+    <title>Home</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   </head>
@@ -37,7 +37,9 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
           
   
                         
-                        echo '<div class = "mb-1"><h4>Welcome, '.$_SESSION['username'].'!<a href="form.php" class="btn btn-primary float-end">Add Students</a></h4></div>';
+                        echo '<div class = "mb-1"><h4>Welcome, '.$_SESSION['username'].'!
+                        <a href="index.php" class="btn btn-danger float-end ml-3">Log out</a>
+                        <a href="form.php" class="btn btn-primary float-end mx-3">Add Users</a></h4></div>';
                          $conn->close();?>
                
               </div>
@@ -72,9 +74,9 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
                               <td><?= $users['detail']; ?></td>
                               <td>
                                 <a href="show.php?email=<?= $users['email']; ?>" class="btn btn-info btn-sm">View</a>
-                                <a href="student-edit.php?email=<?= $users['email']; ?>" class="btn btn-success btn-sm">Edit</a>
-                                <form action="code.php" method="POST" class="d-inline">
-                                    <button type="submit" name="delete_student"  class="btn btn-danger btn-sm">Delete</button>
+                                <a href="update.php?email=<?= $users['email']; ?>" class="btn btn-success btn-sm">Edit</a>
+                                <form action = "delete.php" method = "POST" class = "d-inline">
+                                     <button type="submit" name="delete_student" value="<?=$users['email'];?>" class="btn btn-danger btn-sm">Delete</button>
                                 </form>
                               </td>
                           </tr>
@@ -92,4 +94,6 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
               </div>
               </div>
               </div>
-              
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>     

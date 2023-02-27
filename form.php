@@ -4,7 +4,8 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
     // User is not logged in, redirect to the login page
     header('Location: index.php');
     exit;
-}?>
+}
+?>
 <html>
   <head>
     <title>Registration</title>
@@ -17,7 +18,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
         <div class="col-md-6">
           <div class="card">
             <div class="card-header">
-              <h4>Add Students</h4>
+              <h4>User Info</h4>
             </div>
             <div class="card-body">
               <?php
