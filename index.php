@@ -14,7 +14,38 @@
               <h4>Log In</h4>
             </div>
             <div class="card-body">
-              <form action="login.php" method="POST">
+            <?php
+  
+                    $servername = "localhost"; 
+                    $username = "hernandez"; 
+                    $password = "ranonline0110"; 
+                    $db = "hernandez"; 
+                    $conn = new mysqli($servername, $username, $password, $db);
+
+                    // Check connection
+                    if ($conn->connect_error) {
+                      die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                  $username = $_POST['username'];
+                  $password = $_POST['password'];
+                  $sql = "SELECT * FROM accounts WHERE username='$username' AND password='$password'";
+                      $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                  session_start();
+                  $_SESSION['username'] = $username;
+                  $_SESSION['password'] = $password;
+                  // Redirect to the user's profile or dashboard page
+                  header('Location: login.php');
+                  exit;
+                   
+                    
+                    
+                  }
+                  }  $conn->close();?>
+              <form method="POST">
                 <div class="mb-3">
                   <label for="username" class="form-label">Username</label>
                   <input type="varchar" class="form-control" name="username" placeholder="Enter your username">

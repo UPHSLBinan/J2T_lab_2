@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
+    // User is not logged in, redirect to the login page
+    header('Location: index.php');
+    exit;
+}?>
 <html>
   <head>
     <title>Registration</title>
@@ -82,7 +88,8 @@
                   <label for="confirmpassword" class="form-label">Confirm Password</label>
                   <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password"required>
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-success">Register</button>
+                <a class="btn btn-primary" href="index.php" role="button">Back to Login</a>
                 
               </form>
 
