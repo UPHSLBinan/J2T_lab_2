@@ -19,7 +19,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.php">Start Bootstrap</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -41,7 +41,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
-                            <h1>Clean Blog</h1>
+                            <h1>Agdon Blog</h1>
                             <span class="subheading">A Blog Theme by Start Bootstrap</span>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                         <p class="post-meta">
                             Posted by
                             <a href="#!">Start Bootstrap</a>
-                            on September 24, 2022
+                            on February 28, 2023
                         </p>
                     </div>
                     <!-- Divider-->
@@ -72,7 +72,7 @@
                         <p class="post-meta">
                             Posted by
                             <a href="#!">Start Bootstrap</a>
-                            on September 18, 2022
+                            on February 28, 2023
                         </p>
                     </div>
                     <!-- Divider-->
@@ -86,7 +86,7 @@
                         <p class="post-meta">
                             Posted by
                             <a href="#!">Start Bootstrap</a>
-                            on August 24, 2022
+                            on February 28, 2023
                         </p>
                     </div>
                     <!-- Divider-->
@@ -100,7 +100,7 @@
                         <p class="post-meta">
                             Posted by
                             <a href="#!">Start Bootstrap</a>
-                            on July 8, 2022
+                            on February 28, 2023
                         </p>
                     </div>
                     <!-- Divider-->
@@ -141,7 +141,8 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2022</div>
+                        <div class="small text-center text-muted fst-italic">Publised on Tuesday, February 28th at 11:50pn</div>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Agdon's Website 2023</div>
                     </div>
                 </div>
             </div>
