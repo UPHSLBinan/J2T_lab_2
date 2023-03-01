@@ -12,8 +12,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
+$fname = "fname";
+$lname = "lname";
+$age = "age";
+$birthday = "birthday";
+$address = "address";
+
+
 // Update query
-$sql = "UPDATE userprofile SET Fname='$Fname', Lname='$Lname', Age='$Age', Birthday='$Birthday', Address='$Address', Timestamp='$Timestamp' WHERE Username='$Username'";
+$sql = "UPDATE users SET fname='$fname', lname='$lname', age='$age', birthday='$birthday', address='$address' WHERE username='$username'";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
