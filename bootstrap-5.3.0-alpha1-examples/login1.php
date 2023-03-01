@@ -1,26 +1,28 @@
 <?php
-$servername = "localhost";
-$username = "myadmin";
-$password = "myadmin";
-$dbname = "parot";
+  
+  $servername = "localhost"; 
+  $username = "myadmin"; 
+  $password = "myadmin"; 
+  $db = "parot"; 
+  $conn = new mysqli($servername, $username, $password, $db);
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
 
-$sql = "SELECT  user, pass FROM login WHERE user ='Eternum' && pass = 'goodlife'";
-$result = $conn->query($sql);
+
+
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$sql = "SELECT * FROM login WHERE username='$username' AND password='$password'";
+      $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo " User! <br>";
-  }
-} else {
-  echo "Wrong Account";
-}
-$conn->close();
-?>
+        
+        echo "Welcome, $username! ";
+      } else {
+        echo "Invalid username or password. Please try again :) ";      
+}  $conn->close();?>
