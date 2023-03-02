@@ -27,3 +27,5 @@ if (mysqli_querry($conn, $sql)) {
 
 }
 mysql_close($conn;)
+
+?>
