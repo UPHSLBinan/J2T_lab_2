@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "suzuki";
 $password = "myadmin";
-$dbname = "suzuki";
+$dbname = "user";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,11 +14,14 @@ if ($conn->connect_error) {
 // sql to create table
 $sql = "CREATE TABLE users (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-Fname VARCHAR(30) NOT NULL,
-Lname VARCHAR(30) NOT NULL,
+Username VARCHAR(30) NOT NULL,
+Password VARCHAR(30) NOT NULL,
+Firstname VARCHAR(30) NOT NULL,
+Middlename VARCHAR(30) NOT NULL,
+Lastname VARCHAR(30) NOT NULL,
 Age VARCHAR(30) NOT NULL,
-Email VARCHAR(50) NOT NULL,
-Detail VARCHAR(30) NOT NULL,
+Birthday VARCHAR(50) NOT NULL,
+Address VARCHAR(50) NOT NULL,
 reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 

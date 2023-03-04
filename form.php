@@ -1,16 +1,20 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <title>Blog</title>
+</head>
 <body>
-
-<form action="index.php" method="post">
-Username: <input type="text" name="Fname"><br>
-Password: <input type="text" name="Lname"><br>
-First Name: <input type="text" name="Age"><br>
-Last Name: <input type="text" name="Email"><br>
-Age: <input type="text" name="Detail"><br>
-Birthday: <input type="text" name="Detail"><br>
-Address: <input type="text" name="Detail"><br>
-<input type="submit">
-</form>
-
+  <h1>Article</h1>
+<form action="blog.php" method="post">
+<label for="Username">Article ID:</label>
+    <textarea name="articleid" required></textarea><br>
+    <label for="title">Title:</label>
+    <textarea name="Title" required></textarea><br>
+    <label for="body">Body:</label>
+    <textarea name="Body" required></textarea><br>
+   <label for="Username">Username:</label>
+    <textarea name="Username" required></textarea><br><br>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
